@@ -7,7 +7,7 @@ CLIENT_SECRET = ""
 
 def fetch_tracks(query="year:2023", limit=50):
     auth = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
-    sp = spotify.Spotify(auth_manager=auth)
+    sp = spotipy.Spotipy(auth_manager=auth)
 
     result = sp.search(q=query, type='track', limit=limit)
     tracks = result['tracks']['items']
