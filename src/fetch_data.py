@@ -1,6 +1,10 @@
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
+import time 
+
+time.sleep(1)  # To avoid hitting rate limits
+
 
 CLIENT_ID = "ID"
 CLIENT_SECRET = ""
@@ -8,7 +12,7 @@ CLIENT_SECRET = ""
 def fetch_tracks(query="year:2023", limit=50):
     auth = SpotifyClientCredentials(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
     sp = spotipy.Spotipy(auth_manager=auth)
-
+    sp.search(q='bollywood', type='track', limit=50)
     result = sp.search(q=query, type='track', limit=limit)
     tracks = result['tracks']['items']
 
