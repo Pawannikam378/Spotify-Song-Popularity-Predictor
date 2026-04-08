@@ -1,5 +1,5 @@
-import spotify
-from spotify.oauth2 import SpotifyClientCredentials
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
 import pandas as pd
 
 CLIENT_ID = "ID"
