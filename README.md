@@ -53,4 +53,4 @@ Example JSON:
 - Deep learning model
 
 ## 👨‍💻 Author
-Your Name
+Pawan Nikam
